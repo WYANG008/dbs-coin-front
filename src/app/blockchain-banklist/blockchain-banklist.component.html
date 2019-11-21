@@ -1,0 +1,40 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title ">Blockchain Bank List</h4>
+                      <p class="card-category">Register Banks in DBS Coin Blockchain Network with Balance</p>
+                  </div>
+                  
+                  <div class="card-body">
+                      <div class="table-responsive">
+
+                          <table class="table">
+                              <thead class=" text-primary">
+                                  <th>ID</th>
+                                  <th>Name</th>
+                                  <th>Public Key</th>
+                                  <th>Balance</th>
+                                  <th>Deregister</th>
+                              </thead>
+                              <tbody *ngFor="let blockchainbank of blockchainBanks; let i = index">
+                                  <tr>
+                                      <td>{{i+1}}</td>
+                                      <td>{{ blockchainbank.name }}</td>
+                                      <td>{{ blockchainbank.address }}</td>
+                                      <td class="text-primary">{{ blockchainbank.balance }}</td>
+                                      <td>
+                                        <button mat-button (click)="deregister(blockchainbank.address, blockchainbank.name, i)" mat-flat-button color="warn">Deregister</button>
+                                      </td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+<div class="main-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-danger">
+                            <h4 class="card-title">Transfer</h4>
+                            <p class="card-category"></p>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <mat-form-field class="example-full-width">
+                                            <input matInput placeholder="To Bank Account"
+                                            [(ngModel)]="toBankPublicKey" name="toBankPublicKey"
+                                            >
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                    
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <mat-form-field class="example-full-width">
+                                          <input matInput placeholder="From Bank Account"
+                                          [(ngModel)]="fromBankPublicKey" name="fromBankPublicKey"
+                                          >
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                               
+                                <div class="row">
+                                    <div class="col-md-6">
+                                      <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Private Key" 
+                                        [(ngModel)]="fromBankPrivateKey" name="fromBankPrivateKey"
+                                        >
+                                      </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                      <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Amount" 
+                                        [(ngModel)]="amount" name="amount"
+                                        >
+                                      </mat-form-field>
+                                    </div>
+                                </div>
+                                
+                                <button mat-raised-button type="button" (click)="transferMoney()" class="btn btn-danger pull-right">Transfer</button>
+                                <div class="clearfix"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         
+        </div>
+      </div>
+      

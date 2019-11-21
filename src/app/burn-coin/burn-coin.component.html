@@ -1,0 +1,41 @@
+<div class="main-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-danger">
+                            <h4 class="card-title">Burn Coin</h4>
+                            <p class="card-category"></p>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                               <div class="row">
+                                    <div class="col-md-6">
+                                      <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Public Key" 
+                                        [(ngModel)]="publicKey" name="publicKey"
+                                        >
+                                      </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                      <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Amount" 
+                                        [(ngModel)]="amount" name="amount"
+                                        >
+                                      </mat-form-field>
+                                    </div>
+                                </div>
+                                
+                                <button mat-raised-button type="button"  (click)="burnCoin()" class="btn btn-danger pull-right">Burn Coin</button>
+                                <div class="clearfix"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         
+        </div>
+      </div>
+      
